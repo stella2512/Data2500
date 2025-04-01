@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  apache80:
+    build:
+      context: ./dockerfile80
+    ports:
+      - "80:80"
+    container_name: apache-http
+
+  apache443:
+    build:
+      context: ./dockerfile443
+    ports:
+      - "443:443"
+    container_name: apache-https
